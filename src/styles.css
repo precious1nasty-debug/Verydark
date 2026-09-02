@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-background: #070b09;
+  --color-foreground: #e8eee9;
+  --color-card: #101614;
+  --color-card-foreground: #e8eee9;
+  --color-popover: #121a16;
+  --color-popover-foreground: #e8eee9;
+  --color-primary: #3f8f6b;
+  --color-primary-foreground: #04110b;
+  --color-secondary: #171d1a;
+  --color-secondary-foreground: #e8eee9;
+  --color-muted: #171d1a;
+  --color-muted-foreground: #8b9890;
+  --color-accent: #1a2420;
+  --color-accent-foreground: #e8eee9;
+  --color-destructive: #c4544a;
+  --color-destructive-foreground: #fdecea;
+  --color-border: #24302a;
+  --color-input: #24302a;
+  --color-ring: #3f8f6b;
+  --color-live: #e24a4a;
+  --color-pitch: #3f8f6b;
+  --color-ivory: #e8eee9;
+  --color-faint: #5c6b62;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius: 12px;
+
+  --shadow-card: 0 1px 0 color-mix(in oklab, var(--color-foreground) 6%, transparent),
+    0 18px 40px -28px rgb(0 0 0 / 0.7);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  * {
+    border-color: var(--color-border);
+  }
+
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  .pitch-grid {
+    background-image:
+      linear-gradient(
+        to right,
+        color-mix(in oklab, var(--color-pitch) 14%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--color-pitch) 14%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at 50% 0%, black 20%, transparent 72%);
+  }
+
+  .hairline {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--color-foreground) 10%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Dream League",
+      "hasCanvas": false,
+      "bodyTextLen": 1552,
+      "bodyTextHash": "8f263e4bb9729857ab8d169c9651cb3a0c482c5485f68c4cff5828c2d04dcae5",
+      "bodyTextPrefix": "DREAM LEAGUE Home Fixtures Results Table Scorers Stats Teams New",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Dream League",
+      "hasCanvas": false,
+      "bodyTextLen": 1244,
+      "bodyTextHash": "b9429b092dc5f50a28a6ee167ff101329aef14712617f1533bf764a4ecd66b3b",
+      "bodyTextPrefix": "DREAM LEAGUE Admin login SEASON 2026 · MATCHDAY 5 Dream League T",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
